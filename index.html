@@ -1,30 +1,104 @@
 <!DOCTYPE html>
 <html>
-<html lang="en">
+  <head>
+    <title>Under the lemon tree</title>
+    <style>
+      @keyframes slideInLeft {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      header {
+        animation: 1s ease-out 0s 1 slideInLeft;
+        background: rgb(0,0,4);
+        background: linear-gradient(180deg, rgba(0,0,4,0.8856136204481793) 57%, rgba(68,78,80,0) 100%);
+        padding: 20px 40px 80px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        
+      }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, Helvetica, Sans Serif;
+        background-image: url("./bg.png");
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beginning</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <style>
-      @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
-</head>
-      
-<body>
-    <div class="container">
-        <h1>Roni's Magical Journey</h1>
-        <p>Once upon a time in a small Russian town, there lived a young girl named Roni...</p>
-        <p>Her journey began with humble beginnings as she delved into various jobs, each holding its own unique charm...</p>
-        <p>As time passed, Roni's knowledge grew like wildflowers in a secret garden...</p>
-        <p>It was during these quiet moments, immersed in the world of fantasy, that Roni's own story began to unfold...</p>
-        <p>As the years went by, Roni's stories became more than mere words on a page...</p>
-        <p>With her pen as her wand and her heart as her guide, Roni embraced her new life as a storyteller...</p>
-        <p>And so, the Russian girl who dared to dream, who embraced change and the unknown, crafted her own tale of resilience and wonder...</p>
-        <p>Her story, filled with endless possibilities and the promise of a happily-ever-after, continues to inspire others to believe in the magic that lies within their own hearts.</p>
-    </div>
-    <div class="button">
-        <h1><a href="https://www.Google.com/"> Click to find out the beginning of the story</a>
-</body>
+      }
+      a {
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 10px;
+        color: #fff;
+      }
+
+      .box {
+      background-color: transparent;
+      width: 400px;
+      height: 600px;
+      perspective: 1000px;
+        
+      color: #fff;
+      font-family: "Lucida Console", "Courier New", monospace;
+      }
+      .box-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.5s;
+      transform-style: preserve-3d;
+
+      }
+      .box:hover .box-inner {
+      transform: rotateY(180deg);
+      }
+      .box-front, .box-back {
+      border-radius: 10px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+      }
+      .box-front {
+        background: rgb(44,55,55);
+        background: linear-gradient(0deg, rgba(44,55,55,1) 25%, rgba(50,37,10,0.7735688025210083) 76%);
+      }
+      .box-back {
+      background-color: #8ebf42;
+      color: #eeeeee;
+      transform: rotateY(180deg);
+      }
+
+      .box-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>The Journey begins</h1>
+    </header>
+    <main>
+        <div class="box-wrapper">
+        <div class="box">
+            <div class="box-inner">
+              <div class="box-front">
+                <h2>Open the book</h2>
+              </div>
+              <div class="box-back">
+                <h2>Introduction</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+  </body>
 </html>
